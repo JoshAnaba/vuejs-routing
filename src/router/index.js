@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
+
 const routes = [
   {
     path: "/",
@@ -18,10 +19,32 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
+  },
+
+  {
+    path: "/brazil",
+    name: "brazil",
+    component: () => import(/* webpackChunkName: "Brazil" */ "../views/Brazil")
+  },
+  {
+    path: "/panama",
+    name: "panama",
+    component: () => import(/* webpackChunkName: "Panama" */ "../views/Panama")
+  },
+  {
+    path: "/jamaica",
+    name: "jamaica",
+    component: () => import(/* webpackChunkName: "Jamaica" */ "../views/Jamaica")
+  },
+  {
+    path: "/hawaii",
+    name: "hawaii",
+    component: () => import(/* webpackChunkName: "Hawaii" */ "../views/Hawaii")
+  },
 ];
 
 const router = new VueRouter({
+  linkExactActiveClass: "active-class",
   routes
 });
 
