@@ -23,24 +23,29 @@ const routes = [
 
   {
     path: "/brazil",
-    name: "brazil",
+    Bname: "brazil",
     component: () => import(/* webpackChunkName: "Brazil" */ "../views/Brazil")
   },
   {
     path: "/panama",
-    name: "panama",
+    name: "Panama",
     component: () => import(/* webpackChunkName: "Panama" */ "../views/Panama")
   },
   {
     path: "/jamaica",
-    name: "jamaica",
+    name: "Jamaica",
     component: () => import(/* webpackChunkName: "Jamaica" */ "../views/Jamaica")
   },
   {
     path: "/hawaii",
-    name: "hawaii",
+    name: "Hawaii",
     component: () => import(/* webpackChunkName: "Hawaii" */ "../views/Hawaii")
   },
+  {
+    path: "/details/:id",
+    name: "DestinationDetails",
+    component: () => import(/* webpackChunkName: "DestinationDetails" */ "../views/DestinationDetails" )
+  }
 ];
 
 const router = new VueRouter({
